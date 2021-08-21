@@ -2,7 +2,7 @@ import { Switch, Route, NavLink } from 'react-router-dom';
 import Home from './components/views/Home'
 import ToDo from './components/views/ToDo'
 
-export default () => {
+const App = () => {
 	return (
 		<div>
 			<div>
@@ -19,3 +19,5 @@ export default () => {
 		</div>
 	);
 }
+
+export default App

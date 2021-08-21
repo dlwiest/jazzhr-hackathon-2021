@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default () => {
+const ToDo = () => {
     return (
         <div>
             <h1>To Do</h1>
@@ -8,3 +8,5 @@ export default () => {
         </div>
     )
 }
+
+export default ToDo
