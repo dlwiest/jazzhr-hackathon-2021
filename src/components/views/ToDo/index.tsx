@@ -1,14 +1,21 @@
 import { observer } from 'mobx-react-lite'
-import { useStores } from '../../../stores/'
+import useController from './controller'
 
 const ToDo = observer(() => {
-    const { toDoStore } = useStores()
-    const { foo } = toDoStore
+    const { newItemValue, onChangeNewItem, onAddItem, items, onClickItem } = useController()
     return (
         <div>
             <h1>To Do</h1>
-            <p>Add or remove items from the to do list.</p>
-            <p><strong onClick={() => { toDoStore.changeFoo() } }>{foo}</strong></p>
+            <p>Use the field below to add items to the to do list. Click items to remove them.</p>
+
+            <form onSubmit={onAddItem}>
+                <label htmlFor="new_item">New Item</label>
+                <input id="new_item" value={newItemValue} onChange={onChangeNewItem} />
+            </form>
+
+            <ul>
+                {items.map((i: string, index: number) => <li key={index} onClick={() => { onClickItem(index) }}>{i}</li>)}
+            </ul>
         </div>
     )
 })
