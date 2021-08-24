@@ -5,7 +5,7 @@ import Home from './components/views/Home'
 import ToDo from './components/views/ToDo'
 
 const App = () => {
-	const [isMenuActive, setIsMenuActive] = useState<boolean>(false)
+	const [isMenuActive, setIsMenuActive] = useState(false)
 	const onToggleMenuActive = () => { setIsMenuActive(!isMenuActive) }
 
 	return (
