@@ -1,22 +1,32 @@
-import { Switch, Route, NavLink } from 'react-router-dom';
+import { useState } from 'react'
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+import { Navbar } from 'react-bulma-components'
 import Home from './components/views/Home'
 import ToDo from './components/views/ToDo'
 
 const App = () => {
-	return (
-		<div>
-			<div>
-				<ul>
-				<li><NavLink activeClassName="active" to="/">Home</NavLink></li>
-				<li><NavLink activeClassName="active" to="/todo">To Do</NavLink></li>
-				</ul>
-			</div>
+	const [isMenuActive, setIsMenuActive] = useState<boolean>(false)
+	const onToggleMenuActive = () => { setIsMenuActive(!isMenuActive) }
 
-			<Switch>
-				<Route path="/" exact component={Home} />
-				<Route path="/todo" component={ToDo} />
-			</Switch>
-		</div>
+	return (
+		<Router>
+			<div>
+				<Navbar color="primary" active={isMenuActive}>
+					<Navbar.Burger onClick={onToggleMenuActive} />
+					<Navbar.Menu>
+						<Navbar.Container>
+							<Navbar.Link arrowless renderAs={NavLink} to="/">Home</Navbar.Link>
+							<Navbar.Link arrowless renderAs={NavLink} to="/todo">To Do</Navbar.Link>
+						</Navbar.Container>
+					</Navbar.Menu>
+				</Navbar>
+
+				<Switch>
+					<Route path="/" exact component={Home} />
+					<Route path="/todo" component={ToDo} />
+				</Switch>
+			</div>
+		</Router>
 	);
 }
 

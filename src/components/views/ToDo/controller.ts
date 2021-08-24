@@ -16,11 +16,11 @@ const ToDoController = () => {
         setNewItemValue('')
     }
 
-    const onClickItem = (index: number) => {
+    const onRemoveItem= (index: number) => {
         toDoStore.removeItemByIndex(index)
     }
 
-    return { newItemValue, onChangeNewItem, onAddItem, items: toDoStore.items, onClickItem }
+    return { newItemValue, onChangeNewItem, onAddItem, items: toDoStore.items, onRemoveItem}
 }
 
 export default ToDoController
