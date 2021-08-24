@@ -3,7 +3,7 @@ import { useStores } from '../../../stores/'
 
 const ToDoController = () => {
     const { toDoStore } = useStores()
-    const [newItemValue, setNewItemValue] = useState<string>('')
+    const [newItemValue, setNewItemValue] = useState('')
 
     const onChangeNewItem = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewItemValue(e.target.value)
