@@ -11,7 +11,7 @@ const ToDo = observer(() => {
             <Section>
                 <Container>
                     <Heading>To Do</Heading>
-                    <p>Use the field below to add items to the to do list. Click items to remove them.</p>
+                    <p>Use the field below to add items to the to do list.</p>
 
                     <form onSubmit={onAddItem}>
                         <Form.Field>
