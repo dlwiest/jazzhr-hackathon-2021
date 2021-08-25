@@ -1,4 +1,4 @@
-import { makeObservable, observable, runInAction } from 'mobx'
+import { makeObservable, observable, action } from 'mobx'
 import RootStore from '.'
 
 class ToDoStore {
@@ -10,15 +10,17 @@ class ToDoStore {
 
         makeObservable(this, {
             items: observable,
+            addItem: action,
+            removeItemByIndex: action
         })
     }
 
     addItem = (newItem: string) => {
-        runInAction(() => { this.items = this.items.concat([newItem]) })
+        this.items = this.items.concat([newItem])
     }
 
     removeItemByIndex = (index: number) => {
-        runInAction(() => { this.items.splice(index, 1) })
+        this.items.splice(index, 1)
     }
 }
 
