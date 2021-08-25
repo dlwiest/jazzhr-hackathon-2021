@@ -2,26 +2,26 @@ import { makeObservable, observable, action } from 'mobx'
 import RootStore from '.'
 
 class ToDoStore {
-    private rootStore: RootStore
-    public items: string[] = []
+	private rootStore: RootStore
+	public items: string[] = []
 
-    constructor(rootStore: RootStore) {
-        this.rootStore = rootStore
+	constructor(rootStore: RootStore) {
+		this.rootStore = rootStore
 
-        makeObservable(this, {
-            items: observable,
-            addItem: action,
-            removeItemByIndex: action
-        })
-    }
+		makeObservable(this, {
+			items: observable,
+			addItem: action,
+			removeItemByIndex: action
+		})
+	}
 
-    addItem = (newItem: string) => {
-        this.items = this.items.concat([newItem])
-    }
+	addItem = (newItem: string) => {
+		this.items = this.items.concat([newItem])
+	}
 
-    removeItemByIndex = (index: number) => {
-        this.items.splice(index, 1)
-    }
+	removeItemByIndex = (index: number) => {
+		this.items.splice(index, 1)
+	}
 }
 
 export default ToDoStore

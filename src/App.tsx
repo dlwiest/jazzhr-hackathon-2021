@@ -6,7 +6,7 @@ import ToDo from './components/views/ToDo'
 
 const App = () => {
 	const [isMenuActive, setIsMenuActive] = useState(false)
-	const onToggleMenuActive = () => { setIsMenuActive(!isMenuActive) }
+	const onToggleMenuActive = () => setIsMenuActive(!isMenuActive)
 
 	return (
 		<Router>
