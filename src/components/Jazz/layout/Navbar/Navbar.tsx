@@ -9,7 +9,6 @@ const Template = styled.div`
 const TemplateInner = styled.div`
     max-width: 1024px;
     color: #fff;
-    padding: 1em 0 1em 0;
     display: flex;
     flex-direction: row;
     flex-grow: 1;
