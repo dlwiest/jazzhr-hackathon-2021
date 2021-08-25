@@ -1,4 +1,4 @@
-import { useStores } from '../../../stores/'
+import { useStores } from 'stores'
 
 interface ReturnProps {
     useDarkMode: boolean

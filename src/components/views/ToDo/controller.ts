@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useStores } from '../../../stores/'
+import { useStores } from 'stores'
 
 interface ReturnProps {
 	newItemValue: string
