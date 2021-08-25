@@ -11,6 +11,18 @@ export const GlobalStyles = createGlobalStyle`
         color: ${({ theme }) => theme.text } !important;
     }
 
+    h1 {
+        font-size: 2.8em !important;
+    }
+
+    h2 {
+        font-size: 2.4em !important;
+    }
+
+    h3 {
+        font-size: 2.2em !important;
+    }
+
     strong {
         color: ${({ theme }) => theme.text } !important;
     }

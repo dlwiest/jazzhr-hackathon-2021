@@ -19,7 +19,7 @@ interface Props {
     children: JSX.Element | JSX.Element[]
 }
 
-const Navbar = ({ children }: Props) => {
+const Navbar = ({ children }: Props): JSX.Element => {
     return <Template>
         <TemplateInner>
             {children}

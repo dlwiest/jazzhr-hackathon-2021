@@ -5,6 +5,7 @@ import { GlobalStyles } from './style/global'
 import { useStores } from './stores'
 import Home from './components/views/Home'
 import ToDo from './components/views/ToDo'
+import Components from './components/views/Components'
 import Settings from './components/views/Settings'
 import { observer } from 'mobx-react-lite'
 import logoSrc from 'assets/images/jazzhr-logo.svg'
@@ -26,6 +27,7 @@ const App = observer(() => {
 							<JZNavbarLinks>
 								<NavLink to="/">Home</NavLink>
 								<NavLink to="/todo">To Do</NavLink>
+								<NavLink to="/components">Components</NavLink>
 								<NavLink to="/settings">Settings</NavLink>
 							</JZNavbarLinks>
 						</JZNavbarSection>
@@ -34,6 +36,7 @@ const App = observer(() => {
 						<Switch>
 							<Route path="/" exact component={Home} />
 							<Route path="/todo" component={ToDo} />
+							<Route path="/components" component={Components} />
 							<Route path="/settings" component={Settings} />
 						</Switch>
 					</div>
