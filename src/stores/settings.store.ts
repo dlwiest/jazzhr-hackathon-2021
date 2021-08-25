@@ -14,7 +14,7 @@ class SettingsStore {
 		})
 	}
 
-    toggleUseDarkMode = () => this.useDarkMode = !this.useDarkMode
+    toggleUseDarkMode = (): void => { this.useDarkMode = !this.useDarkMode }
 }
 
 export default SettingsStore

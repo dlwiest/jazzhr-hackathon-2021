@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite'
-import { Content, Section, Container, Heading, Form, Button } from 'react-bulma-components'
+import { Content, Section, Container, Form, Button } from 'react-bulma-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import useController from './controller'

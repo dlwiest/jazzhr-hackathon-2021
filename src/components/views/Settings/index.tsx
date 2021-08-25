@@ -1,8 +1,7 @@
-import { observer } from 'mobx-react-lite'
 import { Content, Section, Container, Form } from 'react-bulma-components'
 import useController from './controller'
 
-const Settings = observer(() => {
+const Settings = (): JSX.Element => {
 	const { useDarkMode, onToggleDarkMode } = useController()
 	return (
 		<Content>
@@ -20,6 +19,6 @@ const Settings = observer(() => {
 			</Section>
 		</Content>
 	)
-})
+}
 
 export default Settings

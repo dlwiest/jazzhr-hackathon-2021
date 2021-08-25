@@ -1,6 +1,10 @@
 import { useStores } from '../../../stores/'
 
-const ToDoController = () => {
+interface ReturnProps {
+	toDoItems: string[]
+}
+
+const ToDoController = (): ReturnProps => {
 	const { toDoStore } = useStores()
 	return { toDoItems: toDoStore.items }
 }

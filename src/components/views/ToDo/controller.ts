@@ -1,7 +1,15 @@
 import React, { useState } from 'react'
 import { useStores } from '../../../stores/'
 
-const ToDoController = () => {
+interface ReturnProps {
+	newItemValue: string
+	onChangeNewItem: (e: React.ChangeEvent<HTMLInputElement>) => void
+	onAddItem: (e: React.FormEvent<HTMLFormElement>) => void
+	items: string[]
+	onRemoveItem: (index: number) => void
+}
+
+const ToDoController = (): ReturnProps => {
 	const { toDoStore } = useStores()
 	const [newItemValue, setNewItemValue] = useState('')
 

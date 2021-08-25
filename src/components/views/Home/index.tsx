@@ -1,7 +1,7 @@
-import { Content, Section, Container, Heading } from 'react-bulma-components'
+import { Content, Section, Container } from 'react-bulma-components'
 import useController from './controller'
 
-const Home = () => {
+const Home = (): JSX.Element => {
 	const { toDoItems } = useController()
 
 	return (

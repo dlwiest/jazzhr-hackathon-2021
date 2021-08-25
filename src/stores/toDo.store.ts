@@ -15,11 +15,11 @@ class ToDoStore {
 		})
 	}
 
-	addItem = (newItem: string) => {
+	addItem = (newItem: string): void => {
 		this.items = this.items.concat([newItem])
 	}
 
-	removeItemByIndex = (index: number) => {
+	removeItemByIndex = (index: number): void => {
 		this.items.splice(index, 1)
 	}
 }

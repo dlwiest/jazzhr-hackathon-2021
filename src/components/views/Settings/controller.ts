@@ -1,6 +1,11 @@
 import { useStores } from '../../../stores/'
 
-const SettingsController = () => {
+interface ReturnProps {
+    useDarkMode: boolean
+    onToggleDarkMode: () => void
+}
+
+const SettingsController = (): ReturnProps => {
 	const { settingsStore } = useStores()
 
     const onToggleDarkMode = () => {
