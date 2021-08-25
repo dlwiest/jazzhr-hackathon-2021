@@ -10,7 +10,7 @@ const ToDo = observer(() => {
 		<Content>
 			<Section>
 				<Container>
-					<Heading>To Do</Heading>
+					<h1>To Do</h1>
 					<p>Use the field below to add items to the to do list.</p>
 
 					<form onSubmit={onAddItem}>
